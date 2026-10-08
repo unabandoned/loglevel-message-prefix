@@ -20,7 +20,7 @@
     "url": "git+https://github.com/unabandoned/loglevel-message-prefix.git"
   },
   "license": "MIT",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "main": "./lib/main.js",
   "scripts": {
     "test": "node --test test/*.test.js",
