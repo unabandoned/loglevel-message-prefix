@@ -1,4 +1,14 @@
-# loglevel Message prefix plugin [![NPM Version](https://img.shields.io/npm/v/@natlibfi/loglevel-message-prefix.svg)](https://npmjs.org/package/loglevel-message-prefix) [![Build Status](https://travis-ci.org/NatLibFi/loglevel-message-prefix.svg)](https://travis-ci.org/NatLibFi/loglevel-message-prefix) [![Test Coverage](https://codeclimate.com/github/NatLibFi/loglevel-message-prefix/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/loglevel-message-prefix/coverage)
+# loglevel Message prefix plugin
+
+> **This is a maintained fork of [NatLibFi/loglevel-message-prefix][upstream], published as
+> [`@unabandoned/loglevel-message-prefix`][pkg].** Upstream was archived in 2017 and both of its
+> npm names (`loglevel-message-prefix`, deprecated, and `@natlibfi/loglevel-message-prefix`) have
+> had no release since. The plugin's behaviour is unchanged; the fork drops the `es6-polyfills`
+> dependency (it only supplied `Object.assign`, which every supported engine has natively) and
+> declares `loglevel` as a peer dependency. See [.unabandoned.yml](.unabandoned.yml).
+
+[upstream]: https://github.com/NatLibFi/loglevel-message-prefix
+[pkg]: https://www.npmjs.com/package/@unabandoned/loglevel-message-prefix
 
 Plugin for [loglevel](https://github.com/pimterry/loglevel) which allows defining prefixes for log messages
 
@@ -6,20 +16,23 @@ Plugin for [loglevel](https://github.com/pimterry/loglevel) which allows definin
 
 ### Installation
 
-Clone the sources and install the package (In the source directory) on command line using `npm`:
-
 ```sh
-npm install
+npm install loglevel @unabandoned/loglevel-message-prefix
 ```
+
+To keep existing `require('loglevel-message-prefix')` / `import ... from 'loglevel-message-prefix'`
+calls working, install it under its old name with an alias:
+
+```json
+"loglevel-message-prefix": "npm:@unabandoned/loglevel-message-prefix@^3.1.0"
+```
+
+`loglevel` is a peer dependency: the plugin decorates the logger you pass in, so it uses your copy.
 
 ## Testing
 
-Run the following NPM script to lint, test and check coverage of the code:
-
-```javascript
-
-npm run check
-
+```sh
+npm test
 ```
 
 #### AMD
@@ -91,8 +104,6 @@ The configuration object is passed as the second argument to the function. Follo
 - **separator**: String used to separate prefixes. Defaults to single whitespace (` `).
 - **options**: Options for dynamic prefixes. Available options are:
   - *timestamp*: An object of properties for date formatting. Available properties are: *locale*, *timezone* and *hour12*. Defaults to `{hour12: false}`
-
-The properties are defined the [schema file](https://github.com/NatLibFi/loglevel-message-prefix/blob/master/resources/parameters-schema.json).
 
 ## License and copyright
 
