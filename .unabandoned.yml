@@ -1,0 +1,27 @@
+schema: 1
+
+package: "@unabandoned/loglevel-message-prefix"
+
+upstream:
+  repo: NatLibFi/loglevel-message-prefix
+  reason: "archived by its owner; no release since 2017 under either npm name, and the unscoped name is deprecated in favour of the equally abandoned @natlibfi one"
+
+summary: >-
+  A loglevel plugin that prepends a configurable prefix (timestamp, level and
+  static labels) to every log message.
+
+why-forked: >-
+  TheTechNetwork/CyberChef ships it at runtime in its web workers. Upstream is
+  abandoned and pulled in es6-polyfills, itself deprecated and abandoned with
+  its own abandoned dependencies. Forked to drop that tree entirely, leaving
+  loglevel (a peer) as its only dependency.
+
+used-by:
+  - consumer: TheTechNetwork/CyberChef
+    purpose: >-
+      prefixes worker log lines with the worker's name (ChefWorker, DishWorker,
+      InputWorker, LoaderWorker, ZipWorker)
+
+status: active
+
+tags: [logging, loglevel, loglevel-plugin]
