@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.1.2](https://github.com/unabandoned/loglevel-message-prefix/compare/loglevel-message-prefix-v3.1.1...loglevel-message-prefix-v3.1.2) (2026-11-21)
+
+
+### Dependencies & maintenance
+
+* **deps:** update unabandoned/.github action to v1.3.6 ([#7](https://github.com/unabandoned/loglevel-message-prefix/issues/7)) ([28002a1](https://github.com/unabandoned/loglevel-message-prefix/commit/28002a1c0ea85fbd5337a0d48887ee89559459be))
+* **deps:** update unabandoned/.github action to v1.3.7 ([#9](https://github.com/unabandoned/loglevel-message-prefix/issues/9)) ([c641d24](https://github.com/unabandoned/loglevel-message-prefix/commit/c641d24b20b2d2536fb33497cb2baa65c09c9d83))
+* **deps:** update unabandoned/.github action to v1.3.8 ([#10](https://github.com/unabandoned/loglevel-message-prefix/issues/10)) ([7997551](https://github.com/unabandoned/loglevel-message-prefix/commit/7997551ab516854ec7b87222207263f1cd845091))
+
 ## [3.1.1](https://github.com/unabandoned/loglevel-message-prefix/compare/loglevel-message-prefix-v3.1.0...loglevel-message-prefix-v3.1.1) (2026-11-03)
 
 
